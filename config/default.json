@@ -1,0 +1,5 @@
+{
+  "PORT": 5000,
+  "DBUrl": "mongodb+srv://Kenan:K2VRRTZFQ5QJ@cluster0.lgrbc.mongodb.net/example",
+  "secretKey": "react-book-shop"
+}
