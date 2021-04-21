@@ -3,11 +3,15 @@ const mongoose = require('mongoose')
 const config = require('config')
 const authRoutes = require('./routes/authRoutes')
 const bookRoutes = require('./routes/bookRoutes')
+const authorRoutes = require('./routes/authorRoutes')
+const genreRoutes = require('./routes/genreRoutes')
 
 const server = express()
 server.use(express.json())
 server.use('/api/auth', authRoutes)
 server.use('/api/books', bookRoutes)
+server.use('/api/genre', genreRoutes)
+server.use('/api/author',authorRoutes)
 
 const start = async () => {
     await mongoose.connect(config.get('DBUrl'), {
